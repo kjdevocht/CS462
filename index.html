@@ -2,21 +2,38 @@
 <header><title>CS 462 Lab 1</title></header>
 <body>
 Name: Kevin DeVocht
+<br>
 AMI ID: ami-38e4fe59
+<br>
 Script:
+<br>
 #!/bin/bash
+<br>
 yum update -y
+<br>
 yum install -y httpd24 php56 mysql55-server php56-mysqlnd
+<br>
 service httpd start
+<br>
 chkconfig httpd on
+<br>
 groupadd www
+<br>
 usermod -a -G www ec2-user
+<br>
 chown -R root:www /var/www
+<br>
 chmod 2775 /var/www
+<br>
 find /var/www -type d -exec chmod 2775 {} +
+<br>
 find /var/www -type f -exec chmod 0664 {} +
+<br>
 sudo yum install -y git
+<br>
 git clone https://github.com/kjdevocht/CS462.git
+<br>
 cp ./CS462/index.html /var/www/html/
+<br>
 </body>
 </html>
