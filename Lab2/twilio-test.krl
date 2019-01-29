@@ -16,6 +16,7 @@ For Lab2 testing
 
     rule send {
       select when echo testTwilio
-    twilio:send_sms(18012349292, 13853360183, "From pico", account_sid, auth_token);
+      log error <<Error: #{account_sid}>>
+        twilio:send_sms(18012349292, 13853360183, "From pico", account_sid, auth_token);
   }
 }
