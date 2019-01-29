@@ -5,7 +5,7 @@ ruleset com.stoutsuidae.krl.twilio {
 For Lab2
 >>
     use module com.stoutsuidae.krl.twilio.keys alias keys
-    provides send_sms
+    provide send_sms
   }
   global {
     account_sid = keys:sid;
@@ -17,6 +17,6 @@ For Lab2
                 "To":to,
                 "Body":message
             })
-}
+    }
   }
 }
