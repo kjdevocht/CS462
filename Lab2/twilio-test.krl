@@ -4,7 +4,7 @@ ruleset com.stoutsuidae.krl.twilio.test {
     description <<
 For Lab2 testing
 >>
-use module com.stoutsuidae.krl.twilio.keys alias keys
+use module com.stoutsuidae.krl.twilio.keys
     use module com.stoutsuidae.krl.twilio alias twilio 
         with account_sid = keys:twilio{"sid}
         auth_token = keys:twilio{"auth"}

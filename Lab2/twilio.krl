@@ -6,7 +6,7 @@ For Lab2
 >>
     configure using auth_token = ""
                     account_sid = ""
-    provide send_sms
+    provides send_sms
   }
   global {
     send_sms = defaction(to, from, message, account_sid, auth_token){
